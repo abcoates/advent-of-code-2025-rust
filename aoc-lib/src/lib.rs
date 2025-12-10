@@ -2,7 +2,7 @@ pub mod utils;
 
 // Year modules - add your years here as you implement them
 // Example: pub mod year2024;
-pub mod year2024;
+pub mod year2025;
 
 use anyhow::Result;
 
@@ -21,9 +21,7 @@ impl SolutionRegistry {
     /// Get solver function for a specific year and day
     pub fn get_solver(year: u16, day: u8) -> Option<SolverFn> {
         match year {
-            2024 => Self::get_year_solver(year2024::DAYS, day),
-            // Add more years here:
-            // 2025 => Self::get_year_solver(year2025::DAYS, day),
+            2025 => Self::get_year_solver(year2025::DAYS, day),
             _ => None,
         }
     }
@@ -38,18 +36,14 @@ impl SolutionRegistry {
     /// List all available years
     pub fn available_years() -> Vec<u16> {
         vec![
-            2024,
-            // Add more years here as you implement them:
-            // 2025,
+            2025,
         ]
     }
 
     /// List all available days for a year
     pub fn available_days(year: u16) -> Vec<u8> {
         let days = match year {
-            2024 => &year2024::DAYS,
-            // Add more years here:
-            // 2025 => &year2025::DAYS,
+            2025 => &year2025::DAYS,
             _ => return vec![],
         };
 
