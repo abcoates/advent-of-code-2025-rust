@@ -4,6 +4,7 @@ pub mod day03;
 pub mod day04;
 pub mod day05;
 pub mod day06;
+pub mod day07;
 
 pub const DAYS: &[(&str, fn() -> anyhow::Result<()>)] = &[
     ("1", day01::solve),
@@ -12,4 +13,5 @@ pub const DAYS: &[(&str, fn() -> anyhow::Result<()>)] = &[
     ("4", day04::solve),
     ("5", day05::solve),
     ("6", day06::solve),
+    ("7", day07::solve),
 ];
